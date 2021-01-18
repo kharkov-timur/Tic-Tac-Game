@@ -1,13 +1,118 @@
 body {
+  font: 14px "Century Gothic", Futura, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#e66465, #9198e5);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100%;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.square {
+  font: 100px "Century Gothic", Futura, sans-serif;;
+  background: transparent;
+  border: 4px solid #000;
+  border-radius: 20px;
+  float: left;
+  font-weight: normal;
+  line-height: 50px;
+  width: 100px;
+  height: 100px;
+  margin-right: -4px;
+  margin-top: -4px;
+  padding: 0;
+  text-align: center;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board>div {
+  position: relative;
+}
+
+.game-info {
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.game-info ol {
+  margin: 0 0 0 30px;
+  padding: 0;
+}
+
+.game-info li::marker {
+  font-size: 20px;
+}
+
+.game-info button {
+  margin-bottom: 10px;
+  width: 200px;
+  padding: 5px;
+  font-size: 20px;
+  background: #9198e5;
+  box-shadow: 1px 1px 1px 1px dimgrey;
+}
+
+.game-info button:hover {
+  box-shadow: inset 2px 2px 2px dimgrey;
+}
+
+.btn-clear {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  background: #9198e5;
+  font-size: 30px;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px 2px dimgrey;
+}
+
+.btn-clear:hover {
+  box-shadow: inset 2px 2px 2px dimgrey;
 }
